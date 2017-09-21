@@ -1,9 +1,0 @@
-services:
-    guzzle:
-        class: 'GuzzleHttp\Client'
-
-    domain.security.password_encoder:
-        class: 'Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface'
-        factory: ['@security.encoder_factory', 'getEncoder']
-        arguments:
-            - 'Domain\User\Model\User'

@@ -1,6 +1,0 @@
-doctrine:
-    dbal:
-        host: '%database_test_host%'
-        dbname: '%database_test_name%'
-        user: '%database_test_user%'
-        password: '%database_password%'

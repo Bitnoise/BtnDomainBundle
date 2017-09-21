@@ -25,20 +25,7 @@ class DomainExtension extends BaseExtension
         parent::prepend($container);
 //         get config loader
         $loader = $this->getConfigLoader($container);
-        $loader->tryLoadForExtension('security');
-        $loader->tryLoadForExtension('doctrine');
-        $loader->tryLoadForExtension('doctrine_orm_bridge');
-        $loader->tryLoadForExtension('doctrine_migrations');
         $loader->tryLoadForExtension('jms_serializer');
-        $loader->load('assets');
-
-        $env = $container->getParameter('kernel.environment');
-
-        if ('test' === $env) {
-            $loader->tryLoadForExtension('doctrine', 'doctrine_test');
-        }
-
-        $container->setParameter('huel.domain_bundle.src_dir', realpath(__DIR__ . '/../../../../src/Huel'));
     }
 
     /**
@@ -47,15 +34,7 @@ class DomainExtension extends BaseExtension
     protected function loadInternal(array $mergedConfig, ContainerBuilder $container)
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-        $loader->load('aliases.yml');
         $loader->load('command_bus.yml');
         $loader->load('command_handler.yml');
-        $loader->load('listener.yml');
-        $loader->load('repository.yml');
-        $loader->load('services.yml');
-
-        if ($mergedConfig['persistence']['orm']['enabled']) {
-            $container->setParameter($this->getAlias() . '.persistence.orm.enabled', true);
-        }
     }
 }

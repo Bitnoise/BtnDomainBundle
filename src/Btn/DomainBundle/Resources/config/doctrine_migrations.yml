@@ -1,3 +1,0 @@
-doctrine_migrations:
-  namespace: Btn\DomainBundle\Migrations
-  dir_name: './src/Huel/Btn\DomainBundle/Migrations'

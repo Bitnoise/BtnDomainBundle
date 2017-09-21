@@ -5,11 +5,11 @@ services:
 
     command_bus.validator.resolver:
         public: false
-        class: Domain\MessageBus\Validator\ValidatorResolver
+        class: Btn\Domain\MessageBus\Validator\ValidatorResolver
 
     command_bus.validator.middleware:
         public: false
-        class: Domain\MessageBus\Validator\ValidatorMiddleware
+        class: Btn\Domain\MessageBus\Validator\ValidatorMiddleware
         arguments:
             - '@command_bus.validator.resolver'
         tags:
