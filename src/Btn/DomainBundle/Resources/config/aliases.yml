@@ -1,0 +1,12 @@
+services:
+    user_repository: '@domain.repository.user'
+    container: '@service_container'
+    shopify_api_connector: '@domain.shopify.api_connector'
+    shopify_products_retriever: '@domain.shopify.retrieve_products'
+    product_factory: '@domain.factory.product'
+    discourse_api_connector: '@domain.discourse.api_connector'
+    discourse_generate_user_api_key_query: '@domain.discourse.generate_user_key_query'
+    get_discourse_topics_query: '@domain.discourse.get_discourse_topics_query'
+    discourse_topics_factory: '@domain.factory.discourse_topic'
+    image_uploader: '@domain.uploader.image'
+    offer_factory: '@domain.factory.offer'

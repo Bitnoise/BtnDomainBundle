@@ -1,0 +1,62 @@
+{
+  "name": "bitnoise/domain-bundle",
+  "type": "symfony-bundle",
+  "description": "The BtnDomainBundle makes us (bitnoi.se team) happy",
+  "keywords": [
+    "bitnoise",
+    "utilities"
+  ],
+  "homepage": "https://github.com/Bitnoise/BtnDomainBundle",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Bitnoise Team",
+      "homepage": "http://www.bitnoi.se/",
+      "email": "labs@bitnoi.se"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "symfony/symfony": "3.1.*",
+    "doctrine/doctrine-bundle": "^1.6",
+    "doctrine/migrations": "v1.2.2",
+    "doctrine/doctrine-migrations-bundle": "^1.0",
+    "jms/di-extra-bundle": "^1.8",
+    "jms/serializer-bundle": "~1.1",
+    "simple-bus/symfony-bridge": "^4.1",
+    "sensio/distribution-bundle": "^5.0.19",
+    "sensio/framework-extra-bundle": "^3.0.2",
+    "symfony/monolog-bundle": "^3.1.0",
+    "symfony/swiftmailer-bundle": "^2.3.10",
+    "doctrine/orm": "^2.5",
+    "bitnoise/domain": "dev-master"
+  },
+  "require-dev": {
+    "sensio/generator-bundle": "^3.0",
+    "symfony/phpunit-bridge": "^3.0"
+  },
+  "suggest": {
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://bitnoise.github.io/packages/"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:Bitnoise/BtnDomain.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Btn\\DomainBundle\\": "src/Btn/DomainBundle/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-1.0": "1.0-dev"
+    }
+  }
+}

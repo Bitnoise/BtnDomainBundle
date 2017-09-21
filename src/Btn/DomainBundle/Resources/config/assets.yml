@@ -1,0 +1,10 @@
+framework:
+  assets:
+      version_format: '%%s?v=%%s'
+#      packages:
+#          static:
+#              base_urls: '%static_domain%'
+#          cdn_media:
+#              base_urls: 'http:%cdn_domain%'
+#          media_video_source:
+#              base_urls: 'https:%cdn_domain_source_video%%aws_s3_bucket_video_source%/'

@@ -1,0 +1,36 @@
+services:
+    domain.repository.user:
+        class: 'Btn\DomainBundle\Repository\UserRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\User\Model\User'
+    domain.repository.icon:
+        class: 'Btn\DomainBundle\Repository\IconRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\Icon\Model\Icon'
+    domain.repository.banners:
+        class: 'Btn\DomainBundle\Repository\BannerFeatureRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\BannerFeature\Model\BannerFeature'
+    domain.repository.flavours:
+        class: 'Btn\DomainBundle\Repository\FlavourRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\Flavour\Model\Flavour'
+    domain.repository.offers:
+        class: 'Btn\DomainBundle\Repository\OfferRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\Offer\Model\Offer'
+    domain.repository.products:
+        class: 'Btn\DomainBundle\Repository\ProductRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\Product\Model\Product'
+    domain.repository.discourse_topics:
+        class: 'Btn\DomainBundle\Repository\DiscourseTopicRepository'
+        factory: ['@doctrine', 'getRepository']
+        arguments:
+            - 'Domain\DiscourseTopic\Model\DiscourseTopic'

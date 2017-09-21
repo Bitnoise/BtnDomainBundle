@@ -1,0 +1,10 @@
+services:
+#    listener.update_user_stats_on_create:
+#        class: Domain\Item\EventListener\UpdateUserStatsWhenItemCreated
+#        arguments:
+#            - '@command_bus'
+#        tags:
+#            - { name: event_subscriber, subscribes_to: Domain\Message\Event\MessagePosted }
+#            - { name: event_subscriber, subscribes_to: Domain\Image\Event\ImagePosted }
+#            - { name: event_subscriber, subscribes_to: Domain\Video\Event\VideoPosted }
+#            - { name: event_subscriber, subscribes_to: Domain\Item\Event\ItemUserUpdated }

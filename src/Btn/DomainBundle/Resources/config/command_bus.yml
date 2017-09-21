@@ -1,0 +1,16 @@
+services:
+    command_bus.events_recorder:
+        public: false
+        class: SimpleBus\Message\Recorder\PublicMessageRecorder
+
+    command_bus.validator.resolver:
+        public: false
+        class: Domain\MessageBus\Validator\ValidatorResolver
+
+    command_bus.validator.middleware:
+        public: false
+        class: Domain\MessageBus\Validator\ValidatorMiddleware
+        arguments:
+            - '@command_bus.validator.resolver'
+        tags:
+            - { name: command_bus_middleware, priority: 100 }
