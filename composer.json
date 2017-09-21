@@ -34,10 +34,6 @@
     "simple-bus/symfony-bridge": "^4.1",
     "bitnoise/domain": "dev-master"
   },
-  "require-dev": {
-    "sensio/generator-bundle": "^3.0",
-    "symfony/phpunit-bridge": "^3.0"
-  },
   "suggest": {
   },
   "repositories": [
