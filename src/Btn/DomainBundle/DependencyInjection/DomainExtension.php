@@ -26,6 +26,7 @@ class DomainExtension extends BaseExtension
 //         get config loader
         $loader = $this->getConfigLoader($container);
         $loader->tryLoadForExtension('jms_serializer');
+        $loader->tryLoadForExtension('jms_di_extra');
     }
 
     /**
