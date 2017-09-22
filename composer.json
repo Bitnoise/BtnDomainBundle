@@ -32,7 +32,7 @@
     "jms/di-extra-bundle": "^1.8",
     "jms/serializer-bundle": "~1.1",
     "simple-bus/symfony-bridge": "^4.1",
-    "bitnoise/domain": "1.0.x-dev"
+    "bitnoise/domain": "1.0.*"
   },
   "suggest": {
   },
