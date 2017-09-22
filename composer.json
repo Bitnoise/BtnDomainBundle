@@ -40,10 +40,6 @@
     {
       "type": "composer",
       "url": "https://bitnoise.github.io/packages/"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Bitnoise/BtnDomain.git"
     }
   ],
   "autoload": {
