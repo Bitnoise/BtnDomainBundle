@@ -52,8 +52,10 @@ class CommandBusCompilerPass extends AbstractCompilerPass
     private function autoDiscoverServices(ContainerBuilder $container)
     {
         $finder = new Finder();
+        $kernelDir = $container->getParameter('kernel.root_dir');
+        $domainPath = sprintf($kernelDir . "/../src/Domain/*/Command/");
         try {
-            $finder->files()->in(__DIR__ . '/../../../Domain/*/Command/')->name('/(Handler|Validator)\.php$/');
+            $finder->files()->in($domainPath)->name('/(Handler|Validator)\.php$/');
         }catch(\InvalidArgumentException $e){
             $finder = [];
         }
